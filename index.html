@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Barber | Barbería (sitio de demostración)</title>
+  <meta name="description" content="Urban Barber: página de demostración de una barbería ficticia. Cortes, barba y afeitado clásico.">
+
+  <!-- Este mini script marca la página como "con JavaScript activo".
+       Sirve para que las animaciones solo se apliquen si JavaScript funciona. -->
+  <script>document.documentElement.className += ' js';</script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- AVISO DE DEMOSTRACIÓN -->
+  <div class="demo-banner" role="note">
+    Sitio de demostración · Urban Barber es un negocio ficticio · Todos los datos son de ejemplo
+  </div>
+
+  <!-- ENCABEZADO / MENÚ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Urban Barber, ir al inicio">
+        <span class="logo-mark">UB</span>
+        <span class="logo-text">Urban <strong>Barber</strong></span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <a class="btn btn-gold btn-small" href="#contacto" data-whatsapp
+               data-message="Hola, quiero reservar una cita en Urban Barber.">Reservar</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <p class="eyebrow">Barbería · Estilo urbano · Desde 2015 (ficticio)</p>
+        <h1>El corte que <span class="gold">te define</span></h1>
+        <p class="hero-text">
+          Cortes modernos, barba perfilada y afeitado clásico con toalla caliente.
+          Un espacio pensado para que salgas con la mejor versión de ti.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contacto" data-whatsapp
+             data-message="Hola, quiero reservar una cita en Urban Barber.">
+            Reservar por WhatsApp
+          </a>
+          <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <a href="#servicios" class="scroll-hint" aria-label="Bajar a servicios">↓</a>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Lo que hacemos</p>
+          <h2>Servicios y precios</h2>
+          <p class="section-note">Precios de ejemplo en pesos colombianos (COP). No son precios reales.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Corte clásico</h3>
+              <span class="price">$30.000</span>
+            </div>
+            <p>Corte a tijera o máquina, lavado y peinado final.</p>
+            <span class="duration">≈ 40 min</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Corte + barba</h3>
+              <span class="price">$45.000</span>
+            </div>
+            <p>El combo completo: corte, perfilado de barba y aceite.</p>
+            <span class="duration">≈ 60 min</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Arreglo de barba</h3>
+              <span class="price">$20.000</span>
+            </div>
+            <p>Perfilado, recorte y cuidado con productos especiales.</p>
+            <span class="duration">≈ 25 min</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Afeitado con toalla caliente</h3>
+              <span class="price">$25.000</span>
+            </div>
+            <p>Afeitado tradicional con navaja y toalla caliente.</p>
+            <span class="duration">≈ 30 min</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Corte infantil</h3>
+              <span class="price">$22.000</span>
+            </div>
+            <p>Para los más pequeños (hasta 12 años), con mucha paciencia.</p>
+            <span class="duration">≈ 30 min</span>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <h3>Diseño y detalles</h3>
+              <span class="price">$10.000</span>
+            </div>
+            <p>Líneas, degradados creativos y perfilado de cejas.</p>
+            <span class="duration">≈ 15 min</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section section-dark" id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Nuestro trabajo</p>
+          <h2>Galería</h2>
+          <p class="section-note">
+            Imágenes de ejemplo (ilustraciones). Para usar tus propias fotos, mira la guía de personalización.
+          </p>
+        </div>
+
+        <!-- PARA CAMBIAR UNA IMAGEN POR UNA FOTO REAL:
+             1) Crea una carpeta "imagenes" junto a index.html y guarda allí tu foto (ej. corte1.jpg).
+             2) Dentro del <div class="ph ..."> borra el <svg> y escribe:
+                <img src="imagenes/corte1.jpg" alt="Descripción de la foto"> -->
+        <div class="gallery">
+          <figure class="gallery-item reveal">
+            <div class="ph ph-1">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="18" cy="46" r="8"/><circle cx="46" cy="46" r="8"/><path d="M23 40 L50 10 M41 40 L14 10"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Corte clásico</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <div class="ph ph-2">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="26" width="38" height="12" rx="3"/><path d="M46 32 L58 32 M14 26 L14 38"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Afeitado con navaja</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <div class="ph ph-3">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="18" width="48" height="14" rx="3"/><path d="M14 32 L14 46 M22 32 L22 46 M30 32 L30 46 M38 32 L38 46 M46 32 L46 46 M54 32 L54 46"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Peinado final</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <div class="ph ph-4">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 10 H44 V34 H20 Z"/><path d="M14 34 H50 V44 H14 Z"/><path d="M32 44 V56 M20 56 H44"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Nuestro espacio</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <div class="ph ph-5">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 22 Q32 62 50 22"/><path d="M22 22 Q32 34 42 22"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Perfilado de barba</figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <div class="ph ph-6">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="22" y="8" width="20" height="36" rx="5"/><path d="M26 44 V56 H38 V44 M27 18 H37 M27 26 H37"/></svg>
+            </div>
+            <figcaption>Imagen de ejemplo · Máquina y degradado</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORARIOS Y UBICACIÓN -->
+    <section class="section" id="horarios">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Visítanos</p>
+          <h2>Horarios y ubicación</h2>
+          <p class="section-note">Datos ficticios: esta dirección y estos horarios no existen.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-box reveal">
+            <h3>Horarios (ejemplo)</h3>
+            <table class="hours">
+              <tbody>
+                <tr><th scope="row">Lunes a viernes</th><td>9:00 a. m. – 8:00 p. m.</td></tr>
+                <tr><th scope="row">Sábados</th><td>9:00 a. m. – 6:00 p. m.</td></tr>
+                <tr><th scope="row">Domingos</th><td>10:00 a. m. – 2:00 p. m.</td></tr>
+              </tbody>
+            </table>
+            <p class="small">Se recomienda reservar con anticipación por WhatsApp.</p>
+          </div>
+
+          <div class="info-box reveal">
+            <h3>Ubicación (ficticia)</h3>
+            <p class="address">
+              Calle Ejemplo #12-34<br>
+              Barrio Ficticio<br>
+              Ciudad Ejemplo, País Imaginario
+            </p>
+            <div class="map-placeholder" role="img" aria-label="Espacio reservado para un mapa">
+              <span>📍 Aquí iría un mapa real</span>
+              <small>Este negocio y su dirección no existen</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="section section-dark" id="opiniones">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Clientes</p>
+          <h2>Opiniones</h2>
+          <p class="section-note">Opiniones ficticias escritas como ejemplo. No pertenecen a personas reales.</p>
+        </div>
+
+        <div class="cards cards-3">
+          <blockquote class="testimonial reveal">
+            <span class="badge">Opinión ficticia</span>
+            <p>“Salí con el mejor degradado que he tenido. Ambiente tranquilo y muy buena atención.”</p>
+            <footer>— Cliente de ejemplo 1 · ★★★★★</footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <span class="badge">Opinión ficticia</span>
+            <p>“El afeitado con toalla caliente es una experiencia. Muy recomendable para relajarse.”</p>
+            <footer>— Cliente de ejemplo 2 · ★★★★★</footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <span class="badge">Opinión ficticia</span>
+            <p>“Llevé a mi hijo y quedó feliz. Puntuales y muy cuidadosos con los detalles.”</p>
+            <footer>— Cliente de ejemplo 3 · ★★★★☆</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-inner reveal">
+        <p class="eyebrow">Reservas</p>
+        <h2>Agenda tu cita</h2>
+        <p>
+          Escríbenos por WhatsApp y te respondemos para confirmar día y hora.
+          Aquí no hay formularios: la reserva se hace directamente en el chat.
+        </p>
+        <a class="btn btn-gold btn-large" href="#contacto" data-whatsapp
+           data-message="Hola, quiero información y reservar una cita en Urban Barber.">
+          Escribir por WhatsApp
+        </a>
+        <p class="small">
+          Nota para quien edita la web: el número de WhatsApp es de ejemplo. Se cambia en <code>script.js</code>.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Urban Barber · Proyecto de demostración con datos ficticios.</p>
+      <p><a href="#inicio">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a class="wa-float" href="#contacto" data-whatsapp
+     data-message="Hola, tengo una consulta para Urban Barber." aria-label="Contactar por WhatsApp">
+    <!-- Icono simple de globo de chat (dibujado a mano, no es el logo oficial de WhatsApp) -->
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.500a9.500 9.500 0 0 0-8.200 14.300L2.500 21.500l4.800-1.300A9.500 9.500 0 1 0 12 2.500Z"/><circle class="dot" cx="8" cy="12" r="1.300"/><circle class="dot" cx="12" cy="12" r="1.300"/><circle class="dot" cx="16" cy="12" r="1.300"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
